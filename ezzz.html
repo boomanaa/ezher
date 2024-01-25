@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(back.jpg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+           
+          
+        }
+       
+        .wall {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70vh;
+            overflow: hidden;
+            position: relative;
+        }
+       
+        .picture {
+        width: 240px;
+        height: 300px;
+        transition: transform 0.5s ease-in-out;
+        border-bottom: solid 50px;
+        border-top:  solid 8px;
+        border-left:  solid 8px;
+        border-right:  solid 8px;
+        border-color: aliceblue;
+        margin: 0 6px;
+    
+        }
+        .picture:hover {
+            transform: translateY(-20px) rotate(5deg);
+        }
+        .pic1:hover  .caption1 {
+            transform: translateY(-20px) rotate(5deg);
+        
+        }
+       
+        .pic1 .caption1{
+            color: rgb(43, 17, 0);
+        
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        text-align: center;
+        padding: 8px;
+        height:71.5px;
+        left: 80px;
+        transition: transform 0.5s ;
+       }
+
+
+       .pic2:hover  .caption2{
+            transform: translateY(-20px) rotate(5deg);
+        }
+
+       .pic2 .caption2{
+        color:  rgb(43, 17, 0);
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        text-align: center;
+        padding: 8px;
+        height: 71.5px;
+        left: 355px;
+        transition: transform 0.5s ;
+       }
+      
+       .pic3:hover  .caption3 {
+            transform: translateY(-20px) rotate(5deg);
+        }
+
+       .pic3 .caption3{
+        color:  rgb(43, 17, 0);
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        text-align: center;
+        padding: 8px;
+        height:71.5px;
+        left: 615px;
+        transition: transform 0.5s ;
+       }
+
+       .pic4:hover  .caption4 {
+            transform: translateY(-20px) rotate(5deg);
+        }
+
+       .pic4 .caption4{
+        color: rgb(43, 17, 0);
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        text-align: center;
+        padding: 8px;
+        height: 71.5px;
+        left: 885px;
+        transition: transform 0.5s ;
+       }
+
+       .pic5:hover  .caption5 {
+            transform: translateY(-20px) rotate(5deg);
+        }
+
+       .pic5 .caption5{
+        color: rgb(43, 17, 0);
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        text-align: center;
+        padding: 8px;
+        height:71.5px;
+        left: 1145px;
+        transition: transform 0.5s ;
+       }
+
+      
+  
+    </style>
+    
+</head>
+<body>
+    <br><br><br><br><br><br>
+   
+        <div class="wall">
+         <div class="pic1">
+        <img class="picture" src="1.jpg" alt="Memory 1">
+        <div class="caption1"><i><b>with</b></i></div>
+         </div>
+
+        <div class="pic2">
+        <img class="picture" src="3.jpg" alt="Memory 3">
+        <div class="caption2"><i><b>you,</b></i></div></div>
+
+        <div class="pic3">
+        <img class="picture" src="2.jpg" alt="Memory 4">
+        <div class="caption3"><i><b>life</b></i></div></div>
+
+        <div class="pic4">
+        <img class="picture" src="4.jpg" alt="Memory 5">
+        <div class="caption4"><i><b>becomes</b></i></div></div>
+
+        <div class="pic5">
+        <img class="picture" src="5.jpg" alt="Memory 6">
+        <div class="caption5"><i><b>poetry.</b></i></div></div>
+    </div>
+    
+    </div>
+</body>
+</html>
+

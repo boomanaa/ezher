@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(back.jpg);
+      background-size: cover;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+     border: solid 3px #f5a373;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      padding-top: 20px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grp {
+      margin-bottom: 15px;
+    }
+
+    .grp label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #f5a373;
+  
+    }
+
+    .grp input {
+      padding: 8px;
+      border: 1px solid #f5a373;
+      border-radius: 4px;
+    }
+
+    .btn {
+      background-color:  #f5a373;
+      color: #1b1601;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 300px;
+    }
+    h2{
+      font-size: medium;
+      color:  #ffdbc6;
+    }
+   
+  </style>
+
+  <script>
+    function validateLogin() {
+      var Username = document.getElementById("username").value;
+      var Password = document.getElementById("password").value;
+      var nickname = document.getElementById("Nickname").value;
+      var song = document.getElementById("song").value;
+      
+
+      var correctUsername = "ibrahim khalil ezher";
+      var correctPassword = '030723';
+      var correctnickname = 'totobonona';
+      var correctsong = "there's a light that never goes out";
+
+      if (Username !== correctUsername ||  Password !== correctPassword ||  song !== correctsong ||  nickname !== correctnickname) {
+        var error = document.getElementById("h2").innerHTML = "<u>Shi haja ghalta azin :3</u>"
+        document.write = error;
+      
+    }
+    if (Username =='' &&  nickname == ''&&  song == ''&&  Password == '') {
+        var error = document.getElementById("h2").innerHTML = "<u>3mr hadok l'inputat alkbabd :D</u>"
+        document.write = error;
+      
+    }
+   
+   
+    if (Username == correctUsername &&  Password == correctPassword  && song == correctsong &&  nickname == correctnickname){
+      window.location.href = "ezzz.html";}
+    }
+  </script>
+</head>
+<body>
+
+<br><br>
+  <div class="login-container">
+    <h2 id="h2"><u>3mr hadok l'inputat alkbabd :D</u></h2>
+    <form class="login-form" >
+      <div class="grp">
+        <label style="margin-right: 3px;"><b>Full name:</b></label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="grp">
+        <label style="margin-right: 3px;"><b>Nickname:</b></label>
+        <input type="text" id="Nickname"  required></div>
+        
+      
+
+                
+            <div class="grp" >
+                <label style="margin-right: 3px;"><b>Our song :</b></label>
+                <input type="text" id="song"  required></div>
+
+    
+
+                    
+                    <div class="grp" >
+                        <label style="margin-right: 3px;"><b>Password:</b></label>
+                        <input type="password" id="password" name="password" required></div>
+            
+
+          
+        
+                   </form> 
+      <button class="btn" onclick="validateLogin()"><b>Login</b></button> </div>  
+    
+  </div>
+
+</body>
+</html>

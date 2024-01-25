@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message for you</title>
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url(bun.jpg);
+            backdrop-filter: blur(8px);
+            background-size: contain;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .gif {
+            height: 300px;
+            width: 100%;
+            border: solid 2px  #1b1601;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            color:#ecb99c;
+            margin: 15px 0;
+            font-style:normal;
+            font-size: medium;
+            text-shadow: 2px 2px 0px  #1b1601;
+        }
+        .btn-group {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        button {
+            position: absolute;
+            width: 150px;
+            height: inherit;
+            color: #1b1601;
+            font-size: 16px;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px  #1b1601;
+            border: 2px solid #f5a373 ;
+            font-size: 16px;
+        }
+        button:nth-child(1) {
+            margin-left: -200px;
+           background-color: #1b1601;
+            color: #f5a373;
+        }
+        button:nth-child(2) {
+            margin-right: -200px;
+            color:#1b1601;
+            background-color: #f5a373;
+            box-shadow: 0 2px 4px  #f5a373;
+            border: 2px solid  #1b1601 ;
+        }
+        
+    @keyframes dance {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(20px) }
+      50% { transform: translateX(0); }
+      75% { transform: translateX(-20px)  }
+      100% { transform: translateX(0); }
+    }
+
+    .dance-text {
+      
+      font-weight: bold;
+      animation: dance 2s infinite;
+    }
+  </style>
+      </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="dance-text"><b>Click yes for a sweet surprise, baby!</b></h2>
+        <img class="gif" alt="gif" src="1Vk.gif"/>
+       
+         
+    <!--  https://media.giphy.com/media/9G0AdBbVrkV3O/giphy.gif"   #13010c-->
+
+
+           <div class="btn-group">
+            <button class="yes-btn"><b>Yes</b></button>
+            <button class="no-btn"><b>No</b></button>
+        </div>
+    </div>
+   
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+            const question = document.querySelector(".question");
+            const gif = document.querySelector(".gif");
+            const yesBtn = document.querySelector(".yes-btn");
+            const noBtn = document.querySelector(".no-btn");
+            
+            yesBtn.addEventListener("click", () => {
+                window.location.href = "ezz.html";  });
+            
+            noBtn.addEventListener("mouseover", () => {
+              const noBtnRect = noBtn.getBoundingClientRect();
+              const maxX = window.innerWidth - noBtnRect.width;
+              const maxY = window.innerHeight - noBtnRect.height;
+            
+              const randomX = Math.floor(Math.random() * maxX);
+              const randomY = Math.floor(Math.random() * maxY);
+            
+              noBtn.style.left = randomX + "px";
+              noBtn.style.top = randomY + "px";  });
+              </script>
+    
+</body>
+</html>
