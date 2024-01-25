@@ -8,7 +8,7 @@
   <title>Login</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+     
       background-image: url(back.jpg);
       background-size: cover;
       margin: 0;
@@ -16,9 +16,12 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      box-shadow: 0 2px 4px  #1b1601;
     }
 
     .login-container {
+      background: transparent;
+      backdrop-filter: blur(20px);
      border: solid 3px #f5a373;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -43,13 +46,13 @@
     .grp label {
       margin-bottom: 5px;
       font-weight: bold;
-      color: #f5a373;
+      color: #e0b185;
   
     }
 
     .grp input {
       padding: 8px;
-      border: 1px solid #f5a373;
+      border: 1px solid  #e0b185;
       border-radius: 4px;
     }
 
@@ -62,10 +65,11 @@
       cursor: pointer;
       font-size: 16px;
       width: 300px;
+      font-family: Georgia, 'Times New Roman', Times, serif, cursive, monospace;
     }
     h2{
-      font-size: medium;
-      color:  #ffdbc6;
+      font-size: large;
+      color:  #e0b185;
     }
    
   </style>
@@ -74,8 +78,7 @@
     function validateLogin() {
       var Username = document.getElementById("username").value;
       var Password = document.getElementById("password").value;
-      var nickname = document.getElementById("Nickname").value;
-      var song = document.getElementById("song").value;
+     
       
 
       var correctUsername = "ibrahim khalil ezher";
@@ -83,19 +86,19 @@
       var correctnickname = 'totobonona';
       var correctsong = "there's a light that never goes out";
 
-      if (Username !== correctUsername ||  Password !== correctPassword ||  song !== correctsong ||  nickname !== correctnickname) {
+      if (Username !== correctUsername ||  Password !== correctPassword ){
         var error = document.getElementById("h2").innerHTML = "<u>Shi haja ghalta azin :3</u>"
         document.write = error;
       
     }
-    if (Username =='' &&  nickname == ''&&  song == ''&&  Password == '') {
+    if (Username =='' &&   Password == '') {
         var error = document.getElementById("h2").innerHTML = "<u>3mr hadok l'inputat alkbabd :D</u>"
         document.write = error;
       
     }
    
    
-    if (Username == correctUsername &&  Password == correctPassword  && song == correctsong &&  nickname == correctnickname){
+    if (Username == correctUsername &&  Password == correctPassword ){
       window.location.href = "ezzz.html";}
     }
   </script>
@@ -104,28 +107,19 @@
 
 <br><br>
   <div class="login-container">
-    <h2 id="h2"><u>3mr hadok l'inputat alkbabd :D</u></h2>
+    <h2 id="h2"><u>3mr had l'inputat alkbabd :D</u></h2>
     <form class="login-form" >
       <div class="grp">
-        <label style="margin-right: 3px;"><b>Full name:</b></label>
+        <label style="margin-right: 3px;"><b>Username:</b></label>
         <input type="text" id="username" name="username" required>
       </div>
-      <div class="grp">
-        <label style="margin-right: 3px;"><b>Nickname:</b></label>
-        <input type="text" id="Nickname"  required></div>
-        
+
       
 
-                
-            <div class="grp" >
-                <label style="margin-right: 3px;"><b>Our song :</b></label>
-                <input type="text" id="song"  required></div>
-
-    
 
                     
                     <div class="grp" >
-                        <label style="margin-right: 3px;"><b>Password:</b></label>
+                        <label style="margin-right: 3px;"><b>Password :</b></label>
                         <input type="password" id="password" name="password" required></div>
             
 
